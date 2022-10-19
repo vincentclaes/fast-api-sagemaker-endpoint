@@ -1,12 +1,10 @@
 from fastapi import FastAPI
-from time import sleep
-import uvicorn
-from datetime import datetime
-import logging
-from .data import *
 
+import logging
+print("before fast api")
 logger = logging.getLogger()
 app = FastAPI()
+print("after fast api")
 
 @app.get('/ping')
 async def ping():
@@ -18,4 +16,4 @@ async def invocations():
     return {"body": "prediction"}
 
 def compose_visibility():
-    
+    pass
